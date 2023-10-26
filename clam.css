@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
 
 :root {
   line-height: 1.5;
@@ -43,7 +43,7 @@
 
     --destructive: #ef4444;
 
-    --border: #64748b;
+    --border: #475569;
     --outline: #60a5fa; /* blue-500 */
   }
 
@@ -102,6 +102,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
+  font-weight: 800;
   font-size: 1.75rem;
 }
 
@@ -115,6 +116,7 @@ h3 {
 
 a {
   color: var(--primary);
+  font-weight: bold;
 }
 
 a:hover {
@@ -367,6 +369,17 @@ th {
 
 tr:nth-child(even) {
   background-color: var(--muted);
+}
+
+article, .card {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--border-radius) * 2);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);;
+}
+
+article > * + *, .card > * + * {
+  margin-top: .5rem;
 }
 
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {
