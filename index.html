@@ -4,508 +4,270 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize" />
     <link rel="stylesheet" href="./clam.css" />
-    <title>Vite App</title>
+    <title>Clam.css</title>
+    <style>
+      /* Still considering whether to add these to the main file */
+      main > * {
+        width: 768px;
+      }
+      main > * + section {
+        margin-top: 2rem;
+      }
+      .space-x-2 > * + * {
+        margin-left: 0.5rem;
+      }
+      section > * + *,
+      .space-y-2 > * + * {
+        margin-top: 0.5rem;
+      }
+      hr {
+        margin: 1rem 0;
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav>
-        <a href="/">Logo</a>
-        <div>
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-        <div>
-          <button>cta 1</button>
-          <a href="#" class="btn btn-primary">
-            <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            cta 2
-          </a>
-        </div>
+        <a href="/">Clam.css</a>
+        <a
+          href="https://github.com/rmrt1n/clam.css"
+          target="_blank"
+          class="btn"
+        >
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          GitHub
+        </a>
       </nav>
     </header>
     <main>
-      <p class="notice">This demo page details a select set of elements that are meant to show off Simple.css’s styling, and provide HTML to help you get started easily. If you want a comprehensive demonstration of elements that may or may not be styled by Simple.css, please see <a href="https://test.simplecss.org">our test page</a>.</p>
-
-<p>This page is a demonstration of the elements that can be formatted using Simple.css. Each section includes a code block on how to include it in your site’s design.</p>
-
-<p>This may be a little basic for some people, but I wanted the barrier for entry to be as low as possible for this project.</p>
-
-<h2 id="basic-typography">Basic Typography</h2>
-
-<p>All the typography of Simple.css uses <code class="language-plaintext highlighter-rouge">rem</code> for sizing. This means that accessibility is maintained for those who change their browser font size. The <code class="language-plaintext highlighter-rouge">body</code> element has a size of <code class="language-plaintext highlighter-rouge">1.15rem</code>  which makes all the standard font sizes slightly larger. This equates to <code class="language-plaintext highlighter-rouge">18.4px</code> for paragraph text, instead of the standard <code class="language-plaintext highlighter-rouge">16px</code>.</p>
-
-<p>The heading elements also have an increased top margin in order to break blocks of text up better.</p>
-
-<h1 id="heading-1-3rem">Heading 1 <code class="language-plaintext highlighter-rouge">3rem</code></h1>
-
-<h2 id="heading-2-26rem">Heading 2 <code class="language-plaintext highlighter-rouge">2.6rem</code></h2>
-
-<h3 id="heading-3-2rem">Heading 3 <code class="language-plaintext highlighter-rouge">2rem</code></h3>
-
-<h4 id="heading-4-144rem">Heading 4 <code class="language-plaintext highlighter-rouge">1.44rem</code></h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2&gt;This is a H2 header&lt;h2&gt;
-
-&lt;p&gt;This is some paragraph text.&lt;/p&gt;
-</code></pre></div></div>
-
-<h3 id="links--cards">Cards</h3>
-
-<article style="max-width: 24rem">
-  <h2>Card title</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sit ipsam, a quibusdam perferendis unde molestias laudantium, ut magni officiis quidem? Recusandae deserunt ducimus molestias cupiditate quasi? Dignissimos, sint consectetur.</p>
-  <div>
-    <button>cancel</button>
-    <button class="btn-primary">cta</button>
-  </div>
-</article>
-
-<div class="card">
-  <h2>Card title</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sit ipsam, a quibusdam perferendis unde molestias laudantium, ut magni officiis quidem? Recusandae deserunt ducimus molestias cupiditate quasi? Dignissimos, sint consectetur.</p>
-  <div>
-    <button>cancel</button>
-    <button class="btn-primary">cta</button>
-  </div>
-</div>
-
-<h3 id="links--buttons">Links &amp; Buttons</h3>
-
-<p>Links are formatted very simply on Simple.css (shock horror). They use the <code class="language-plaintext highlighter-rouge">accent</code> CSS variable and are underlined. There is a <code class="language-plaintext highlighter-rouge">:hover</code> effect that removes the underline.</p>
-
-<p>Buttons use the same <code class="language-plaintext highlighter-rouge">accent</code> CSS variable for their colour. When hovering, there is an opacity effect.</p>
-
-<p><a href="https://example.com">I’m a hyperlink</a></p>
-
-<p><button>I’m a button</button></p>
-
-<p><a class="button" href="https://example.com">I’m a button with a link</a></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="https://example.com"&gt;I'm a hyperlink&lt;/a&gt;
-
-&lt;button&gt;I'm a button&lt;/button&gt;
-
-&lt;a class="button" href="https://example.com"&gt;I'm a button with a link&lt;/a&gt;
-</code></pre></div></div>
-
-<h2 id="other-typography-elements">Other typography elements</h2>
-
-<p>There are a number of other typography elements that you can use with Simple.css. Some of the common ones are:</p>
-
-<ul>
-  <li>All the standard stuff, like <strong>bold</strong>, <em>italic</em> and <u>underlined</u> text.</li>
-  <li><mark>Highlighting text</mark> using the <code class="language-plaintext highlighter-rouge">mark</code> element.</li>
-  <li>Adding <code class="language-plaintext highlighter-rouge">inline code</code> using the <code class="language-plaintext highlighter-rouge">code</code> element.</li>
-  <li>Displaying keyboard commands like <kbd>ALT+F4</kbd> using the <code class="language-plaintext highlighter-rouge">kbd</code> element.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;b&gt;Bold text&lt;/b&gt;
-&lt;i&gt;Italic text&lt;/i&gt;
-&lt;u&gt;Underlined text&lt;/u&gt;
-&lt;mark&gt;Highlighted text&lt;/mark&gt;
-&lt;code&gt;Inline code&lt;/code&gt;
-&lt;kbd&gt;Alt+F4&lt;/kbd&gt;
-</code></pre></div></div>
-
-<h3 id="lists">Lists</h3>
-
-<p>We all love a good list, right? I know my wife does!</p>
-
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-</ul>
-
-<ol>
-  <li>Do this thing</li>
-  <li>Do that thing</li>
-  <li>Do the other thing</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Bulleted list
-&lt;ul&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;
-
-# Numbered list
-&lt;ol&gt;
-  &lt;li&gt;Do this thing&lt;/li&gt;
-  &lt;li&gt;Do that thing&lt;/li&gt;
-  &lt;li&gt;Do the other thing&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre></div></div>
-<h3 id="blockquotes">Blockquotes</h3>
-
-<p>Sometimes you may want to quote someone else in your HTML. For this we use the <code class="language-plaintext highlighter-rouge">blockquote</code> element. Here’s what a quote looks like with Simple.css:</p>
-
-<blockquote>
-  <p>Friends don’t spy; true friendship is about privacy, too.</p>
-
-  <p><cite>– Stephen King</cite></p>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;blockquote&gt;
-  &lt;p&gt;Friends don’t spy; true friendship is about privacy, too.&lt;/p&gt;
-  &lt;p&gt;&lt;cite&gt;– Stephen King&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</code></pre></div></div>
-
-<h3 id="code-blocks">Code blocks</h3>
-
-<p>Code blocks are different from the inline <code class="language-plaintext highlighter-rouge">code</code> element. Code blocks are used when you want to display a block of code, like this:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>body {
-  color: var(--text);
-  background: var(--bg);
-  font-size: 1.15rem;
-  line-height: 1.5;
-  margin: 0;
-}
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre&gt;
-&lt;code&gt;
-  body {
-    color: var(--text);
-    background: var(--bg);
-    font-size: 1.15rem;
-    line-height: 1.5;
-    margin: 0;
-  }
-&lt;/code&gt;
-&lt;/pre&gt;
-</code></pre></div></div>
-
-<h2 id="other-html-elements">Other HTML elements</h2>
-
-<p>There are other HTML elements that are formatted in Simple.css. If you think there should be more added, please <a href="https://github.com/kevquirk/simple.css/issues">log an issue on Github</a></p>
-
-<h3 id="notice-box">Notice box</h3>
-
-<p class="notice">This is a notice box. It’s useful for calling out snippets of information. Cool, huh?</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p class="notice"&gt;This is a notice box. It's useful for calling out snippets of information. Cool, huh?&lt;/p&gt;
-</code></pre></div></div>
-
-<h3 id="aside">Aside</h3>
-
-<aside>
-<p><b>Aside</b></p>
-<p>This is an <code>aside</code>, it floats to the right and stands out slightly.</p>
-</aside>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;aside&gt;
-&lt;p&gt;Your aside content goes here.&lt;/p&gt;
-&lt;/aside&gt;
-</code></pre></div></div>
-
-<h3 id="article">Article</h3>
-
-<article>
-<h2>This is an article</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</article>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;article&gt;
-&lt;h2&gt;This is an article&lt;/h2&gt;
-&lt;p&gt;Some content will go here, which will be inside your article.&lt;/p&gt;
-&lt;/article&gt;
-</code></pre></div></div>
-
-<h3 id="section">Section</h3>
-
-<p>Sections are good for splitting up a page into multiple…sections. 🙃</p>
-
-<section>
-<h2>This is a section</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</section>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section&gt;
-&lt;h2&gt;This is a section&lt;/h2&gt;
-&lt;p&gt;Some content will go here, which will be inside your section.&lt;/p&gt;
-&lt;/section&gt;
-</code></pre></div></div>
-
-<h2 id="navigation">Navigation</h2>
-
-<p>The <code class="language-plaintext highlighter-rouge">nav</code> menu is deliberately designed to be extremely simple so that you can improve on it as you see fit. Or, just leave it as is to have a good looking, functional navigation menu.</p>
-
-<p>Navigation menus inside the <code class="language-plaintext highlighter-rouge">header</code> are automatically formatted like the one on this site. If you decide to put a <code class="language-plaintext highlighter-rouge">nav</code> menu elsewhere on your site, for example in a post for a table of contents, no formatting is applied. This is so you can add your own formatting as you see fit.</p>
-
-<p>There’s no JavaScript or checkbox CSS hacks here. It’s just a collection of simple “buttons” that wrap to the given width of the page.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">nav</code> menu will also adapt to smaller screens automatically so that it doesn’t take up too much space.</p>
-
-<p>To add a <code class="language-plaintext highlighter-rouge">nav</code> menu, just add the following to the <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code> section of your site:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;nav&gt;
-  &lt;a href="/"&gt;Home&lt;/a&gt;
-  &lt;a href="/about"&gt;About&lt;/a&gt;
-  &lt;a href="/blog"&gt;Blog&lt;/a&gt;
-  &lt;a href="/notes"&gt;Notes&lt;/a&gt;
-  &lt;a href="/guestbook"&gt;Guestbook&lt;/a&gt;
-  &lt;a href="/contact"&gt;Contact&lt;/a&gt;
-&lt;/nav&gt;
-</code></pre></div></div>
-
-<h2 id="images">Images</h2>
-
-<p>In Simple.css, images within the <code class="language-plaintext highlighter-rouge">main</code> element are always full width and have rounded edges to them. The <code class="language-plaintext highlighter-rouge">figcaption</code> element is also formatted in Simple.css. Here are examples of images with and without a caption:</p>
-
-<p><img src="img.jpg" alt="A dog at an iPad"></p>
-
-<figure>
-  <img alt="This is a black swan" src="img.jpg">
-  <figcaption>This is a black swan</figcaption>
-</figure>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Standard image
-&lt;img alt="A dog on an iPad" src="img.jpg" /&gt;
-
-# Image with a caption
-&lt;figure&gt;
-  &lt;img alt="This is a black swan" src="img.jpg" /&gt;
-  &lt;figcaption&gt;This is a black swan&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre></div></div>
-
-<h2 id="accordions">Accordions</h2>
-
-<p>Accordions are cool to play with. They’re especially useful when it comes to things like FAQ pages. Many people invoke JavaScript, or <code class="language-plaintext highlighter-rouge">div</code> for life when they use accordions. I don’t really understand why that is when it’s available in plain old HTML:</p>
-
-<details>
-  <summary>Spoiler alert!</summary>
-  <p>You smell. 🙂</p>
-</details>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;details&gt;
-  &lt;summary&gt;Spoiler alert!&lt;/summary&gt;
-  &lt;p&gt;You smell. 🙂&lt;/p&gt;
-&lt;/details&gt;
-</code></pre></div></div>
-
-<h2 id="tables">Tables</h2>
-
-<p>Like lists, sometimes you may need to add a table to your webpage. In Simple.css tables automatically highlight every other row to make reading easier. Table header text is also bold. Here’s what they look like:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Number</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Jackie</td>
-      <td>012345</td>
-    </tr>
-    <tr>
-      <td>Lucy</td>
-      <td>112346</td>
-    </tr>
-    <tr>
-      <td>David</td>
-      <td>493029</td>
-    </tr>
-    <tr>
-      <td>Kerry</td>
-      <td>395499</td>
-    </tr>
-    <tr>
-      <td>Steve</td>
-      <td>002458</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>ID</th>
-      <th>Favorite Color</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Jim</td>
-      <td>00001</td>
-      <td>Blue</td>
-    </tr>
-    <tr>
-      <td>Sue</td>
-      <td>00002</td>
-      <td>Red</td>
-    </tr>
-    <tr>
-      <td>Barb</td>
-      <td>00003</td>
-      <td>Green</td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Number&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Jackie&lt;/td&gt;
-      &lt;td&gt;012345&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Lucy&lt;/td&gt;
-      &lt;td&gt;112346&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;David&lt;/td&gt;
-      &lt;td&gt;493029&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Kerry&lt;/td&gt;
-      &lt;td&gt;395499&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Steve&lt;/td&gt;
-      &lt;td&gt;002458&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</code></pre></div></div>
-
-<h2 id="forms">Forms</h2>
-
-<p>Forms are useful for all kinds of things on webpages. Contact forms, newsletter sign ups etc. Forms also look pretty good on Simple.css:</p>
-
-<form>
-  <p><strong>This is just a test form. It doesn't do anything.</strong></p>
-  <p>
-  <select>
-		<option selected="selected" value="1">Title</option>
-		<option value="2">Mr</option>
-    <option value="3">Miss</option>
-    <option value="4">Mrs</option>
-    <option value="5">Other</option>
-	</select>
-  </p>
-  <p>
-  <label>First name</label>
-  <input type="text" name="first_name">
-  </p>
-  <p>
-  <label>Surname</label>
-  <input type="text" name="surname">
-  </p>
-  <p>
-  <label>Email</label>
-  <input type="email" name="email" required="">
-  </p>
-  <p>
-  <label>Enquiry type:</label>
-  <label><input checked="checked" name="type" type="radio" value="sales"> Sales</label> 
-  <label><input name="type" type="radio" value="support"> Support</label> 
-  <label><input name="type" type="radio" value="billing"> Billing</label>
-  </p>
-  <p>
-  <label>Message</label>
-  <textarea rows="6"></textarea>
-  </p>
-  <p>
-  <label for="cars">Choose a car:</label>
-  <select name="cars" id="cars" multiple="">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  </select>
-  </p>
-  <p>
-  <label>
-  <input type="checkbox" id="checkbox" value="terms">
-  I agree to the <a href="#">terms and conditions</a>
-  </label>
-  </p>
-
-  <button>Send</button>
-  <button type="reset">Reset</button>
-  <button disabled="disabled">Disabled</button>
-</form>
-
-<pre><code class="language-HTML">&lt;form&gt;
-  &lt;p&gt;&lt;strong&gt;This is just a test form. It doesn't do anything.&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;select&gt;
-    &lt;option selected="selected" value="1"&gt;Title&lt;/option&gt;
-    &lt;option value="2"&gt;Mr&lt;/option&gt;
-    &lt;option value="3"&gt;Miss&lt;/option&gt;
-    &lt;option value="4"&gt;Mrs&lt;/option&gt;
-    &lt;option value="5"&gt;Other&lt;/option&gt;
-  &lt;/select&gt;&lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;First name&lt;/label&gt;
-  &lt;input type="text" name="first_name"&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;Surname&lt;/label&gt;
-  &lt;input type="text" name="surname"&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;Email&lt;/label&gt;
-  &lt;input type="email" name="email" required=""&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;Enquiry type:&lt;/label&gt;
-  &lt;label&gt;&lt;input checked="checked" name="type" type="radio" value="sales" /&gt; Sales&lt;/label&gt; 
-  &lt;label&gt;&lt;input name="type" type="radio" value="support" /&gt; Support&lt;/label&gt; 
-  &lt;label&gt;&lt;input name="type" type="radio" value="billing" /&gt; Billing&lt;/label&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;Message&lt;/label&gt;
-  &lt;textarea rows="6"&gt;&lt;/textarea&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label for="cars"&gt;Choose a car:&lt;/label&gt;
-  &lt;select name="cars" id="cars" multiple&gt;
-  &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
-  &lt;option value="saab"&gt;Saab&lt;/option&gt;
-  &lt;option value="opel"&gt;Opel&lt;/option&gt;
-  &lt;option value="audi"&gt;Audi&lt;/option&gt;
-  &lt;/select&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-  &lt;label&gt;
-  &lt;input type="checkbox" id="checkbox" value="terms"&gt;
-  I agree to the &lt;a href="#"&gt;terms and conditions&lt;/a&gt;
-  &lt;/label&gt;
-  &lt;/p&gt;
-
-  &lt;button&gt;Send&lt;/button&gt;
-  &lt;button type="reset"&gt;Reset&lt;/button&gt;
-  &lt;button disabled="disabled"&gt;Disabled&lt;/button&gt;
-&lt;/form&gt;
-</code></pre>
+      <section>
+        <h1>Clam.css</h1>
+        <p>
+          Clam.css provides a good-enough set of styles to kick off your new
+          project. It's meant for building prototypes, where you want to build
+          stuff quickly instead of wrestling with CSS. It styles plain HTML, so
+          you don't need to learn a new framework or remember any class names.
+        </p>
+        <p>
+          Clam.css is also mobile responsive and has a dark mode which follows
+          your system's theme. If you found a bug or have a feature request,
+          please
+          <a href="https://github.com/rmrt1n/clam.css/issues">
+            create an issue on GitHub</a
+          >.
+        </p>
+      </section>
+      <section>
+        <h2>Quick start</h2>
+        <p>
+          Clam.css is a single CSS file, so to use it you just need to include
+          it in your HTML file. There are several ways to do this:
+        </p>
+
+        <div class="space-y-2">
+          <h3>Straight from the CDN</h3>
+          <p>
+            The simplest way to use Clam.css is to include it directly from the
+            CDN. Just copy the code below and paste it in the
+            <code>&lt;head&gt;</code> of your HTML file.
+          </p>
+          <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/modern-normalize" /&gt; 
+&lt;link rel="stylesheet" href="" /&gt;</code></pre>
+        </div>
+
+        <div class="space-y-2">
+          <h3>Install from NPM</h3>
+          <p>
+            Another option is to install Clam.css from NPM using your preffered
+            package manager (npm, yarn, pnpm, bun, etc.).
+          </p>
+          <pre><code>pnpm add clamcss</code></pre>
+          <p>
+            Usage might depend on the javascript framework you're using. In
+            Next.js, you can add this line to your root layout:
+          </p>
+          <pre><code>import "clamcss/clam.css"</code></pre>
+        </div>
+      </section>
+      <section>
+        <h2>Docs</h2>
+        <div class="space-y-2">
+          <h3>Typography</h3>
+          <p>
+            Clam.css uses Inter as the default font and 1.5 as the default line
+            height. I think this configuration is good enough for most sites. I
+            didn't include styles for the <code>h5</code> and
+            <code>h6</code> tags because I personally never found myself needing
+            them at all. Very rarely would you need a heading below
+            <code>h4</code>.
+          </p>
+          <div>
+            <h1>Heading 1 <code>2.25rem</code></h1>
+            <h2>Heading 2 <code>1.5rem</code></h2>
+            <h3>Heading 3 <code>1.25rem</code></h3>
+            <h4>Heading 4 <code>1rem</code></h4>
+            <p>
+              In case you didn't know, you can do alot with plain HTML, such as
+              <strong>make text bold</strong>, <em>italic</em>,
+              <u>underline text</u>, <s>strikethroughs</s>,
+              <code> inline code</code>, and even <mark>highlight text</mark>.
+              Use links to link to <a href="#">other parts of your page</a> or
+              to an external site like <a href="https://github.com">GitHub</a>.
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="space-y-2">
+          <h3>Buttons</h3>
+          <p>
+            Clam.css provides two styles of buttons, <code>default</code> and
+            <code>primary</code>. All buttons are styled as
+            <code>default</code> by default. If you want to use
+            <code>primary</code>, you need to add the
+            <code>btn-primary</code> class.
+          </p>
+          <div class="space-x-2">
+            <button>Default button</button>
+            <button class="btn-primary">Primary button</button>
+          </div>
+          <p>
+            You can also style links as buttons. To do this, you need to add the
+            <code>btn</code> class to your <code>a</code> tag. I want to keep
+            Clam.css simple to use, so there won't be a lot of class names to
+            remember.
+          </p>
+          <div class="space-x-2">
+            <a href="#" class="btn">This is a button link</a>
+            <a href="#" class="btn btn-primary"
+              >This is a primary button link</a
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="space-y-2">
+          <h3>Forms and inputs</h3>
+          <p>
+            Clam.css overrides the default styles of some input elements (radio
+            buttons, checkboxes, and select/dropdowns) because they're IMO,
+            ridiculously hard to style. or dropdown input. Note that forms don't
+            have the border, rounded corners, and shadows by default. This is
+            from the <code>.card</code> class that will be covered in later
+            sections.
+          </p>
+          <form class="card" style="max-width: 640px">
+            <strong>This is an example form</strong>
+            <div>
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="johndoe@example.com"
+              />
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input id="password" type="password" />
+            </div>
+            <div>
+              <label for="ta">Description</label>
+              <textarea id="ta" rows="4" placeholder="Your description...">
+              </textarea>
+            </div>
+            <fieldset>
+              <legend>Account type</legend>
+              <input type="radio" id="opt1" name="option" value="1" />
+              <label for="opt1" style="margin-right: 1rem">Regular</label>
+              <input type="radio" id="opt2" name="option" value="2" />
+              <label for="opt2">Admin</label>
+            </fieldset>
+            <div>
+              <label for="select">Country</label>
+              <select id="country">
+                <option value="">Select a country from the dropdown</option>
+                <option value="1">Indonesia</option>
+                <option value="2">Malaysia</option>
+                <option value="3">Singapore</option>
+                <option value="4">Thailand</option>
+                <option value="5">Vietnam</option>
+              </select>
+            </div>
+            <div>
+              <input type="checkbox" id="accept" />
+              <label for="accept">Accept terms and conditions</label>
+            </div>
+            <button type="button">Submit</button>
+          </form>
+        </div>
+        <hr />
+        <div class="space-y-2">
+          <h3>Images</h3>
+          <p>
+            Images are responsive by default. The rounded corners aren't
+            default, if you want them, you'll have to add it yourself. Corner
+            radius is one of the CSS variables I used, so if you want to give
+            some element rounded corners, simply copy paste this into its style
+            attribute: <code>border-radius: var(--border-radius)</code>
+          </p>
+          <figure>
+            <img
+              src="img.jpg"
+              alt="a picture of a giant clam"
+              style="border-radius: var(--border-radius)"
+            />
+            <figcaption>
+              Photo by
+              <a
+                href="https://unsplash.com/@francesco_ungaro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+                >Francesco Ungaro</a
+              >
+              on
+              <a
+                href="https://unsplash.com/photos/brown-clamp-QHK1On-31qQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+                >Unsplash</a
+              >
+            </figcaption>
+          </figure>
+        </div>
+        <hr />
+        <div class="space-y-2">
+          <h3>Cards</h3>
+          <p>
+            Cards are the one of the things that I always use for my
+            applications. So even though I initially wanted to make Clam.css
+            fully classless, I couldn't because there's no way to get cards
+            easily without writing some CSS. I added the <code>card</code> class
+            for this reason. <code>article</code> elements also get this styling
+            by default.
+          </p>
+          <div class="card">
+            <h4>Cards are awesome</h4>
+            <p>
+              Add the <code>card</code> class to any element you want to give
+              them the card style.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Customization</h2>
+        <p>Coming soon...</p>
+      </section>
     </main>
-    <footer>
-    </footer>
+    <footer></footer>
   </body>
 </html>
