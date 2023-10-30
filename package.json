@@ -5,6 +5,10 @@
   "main": "clam.css",
   "author": "Ryan Martin",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmrt1n/clam.css.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
