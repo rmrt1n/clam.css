@@ -76,7 +76,9 @@
         <h2>Quick start</h2>
         <p>
           Clam.css is a single CSS file, so to use it you just need to include
-          it in your HTML file. There are several ways to do this:
+          it in your HTML file. You can do this by including it from a CDN or by
+          installing it from NPM. You can also download the source code directly
+          and put it in your project.
         </p>
 
         <div class="space-y-2">
@@ -84,7 +86,8 @@
           <p>
             The simplest way to use Clam.css is to include it directly from the
             CDN. Just copy the code below and paste it in the
-            <code>&lt;head&gt;</code> of your HTML file.
+            <code>&lt;head&gt;</code> of your HTML file. Clam.css uses modern
+            normalize for normalization, so you should include it as well.
           </p>
           <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/modern-normalize" /&gt; 
 &lt;link rel="stylesheet" href="https://unpkg.com/clam.css" /&gt;</code></pre>
@@ -151,7 +154,7 @@
             Clam.css simple to use, so there won't be a lot of class names to
             remember.
           </p>
-          <div style="display: flex; gap: .5rem; flex-wrap: wrap">
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap">
             <a href="#" class="btn">This is a button link</a>
             <a href="#" class="btn btn-primary"
               >This is a primary button link
@@ -265,9 +268,71 @@
       </section>
       <section>
         <h2>Customization</h2>
-        <p>Coming soon...</p>
+        <p>
+          Clam.css uses CSS variables to set values such as the color and border
+          radiues of an element. To change their values, you need to override
+          them in your own stylesheet. Clam.css uses
+          <a
+            href="https://tailwindcss.com/docs/customizing-colors"
+            target="_blank"
+            >tailwind colors</a
+          >. You can use that as a reference to guide you when you're changing
+          the colors.
+        </p>
+
+        <p>
+          The dark theme uses slightly different colors that the default light
+          theme, so if you didn't disable the dark theme, you'll have to change
+          the colors for the dark theme too. If you want to disable the dark
+          theme, you can paste this line into your
+          <code>&lt;head&gt;</code> element.
+        </p>
+        <pre><code>&lt;meta name="color-scheme" content="light only"&gt;</code></pre>
+        <p>Below is the list of variables used:</p>
+        <div class="space-y-2"></div>
+        <div class="space-y-2">
+          <h3>Default background and text color</h3>
+          <pre><code>--bg: #fff;                 /* white */
+--fg: #020617;              /* slate-950 */</code></pre>
+        </div>
+        <div class="space-y-2">
+          <h3>
+            Background, hover, and text color for primary buttons and links
+          </h3>
+          <pre><code>--primary: #2563eb;         /* blue-600 */
+--primary-hover: #1d4ed8;   /* blue-700 */
+--primary-fg: #fff;         /* white */</code></pre>
+        </div>
+        <div class="space-y-2">
+          <h3>Background, hover, and text color of all the other elements</h3>
+          <pre><code>--secondary: #f1f5f9;       /* slate-100 */
+--secondary-hover: #e2e8f0; /* slate-200 */
+--secondary-fg: #020617;    /* slate-950 */</code></pre>
+        </div>
+        <div class="space-y-2">
+          <h3>Background and text color for inputs and their placeholder</h3>
+          <pre><code>--muted: #f8fafc;           /* slate-50 */
+--muted-fg: #334155;        /* slate-700 */</code></pre>
+        </div>
+        <div class="space-y-2">
+          <h3>Border and outline color</h3>
+          <pre><code>--border: #94a3b8;          /* slate-400 */
+--outline: #3b82f6;         /* blue-500 */</code></pre>
+        </div>
+        <div class="space-y-2">
+          <h3>Border radius (default 6px)</h3>
+          <pre><code>--border-radius: 0.375rem;</code></pre>
+        </div>
       </section>
     </main>
-    <footer></footer>
+    <footer style="margin-top: 4rem">
+      <p style="text-align: center">
+        Made by <a href="https://ryanmartin.me">Ryan Martin</a> and licensed
+        under the
+        <a href="https://github.com/rmrt1n/clam.css/blob/main/README.md#license"
+          >MIT license</a
+        >.
+      </p>
+    </footer>
   </body>
 </html>
