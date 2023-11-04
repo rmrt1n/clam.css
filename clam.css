@@ -17,6 +17,9 @@
   --muted: #f8fafc;           /* slate-50 */
   --muted-fg: #334155;        /* slate-700 */
 
+  --danger: #dc2626;          /* red-600 */
+  --danger-fg: #fff;          /* white */
+
   --border: #94a3b8;          /* slate-400 */
   --outline: #3b82f6;         /* blue-500 */
 
@@ -38,6 +41,9 @@
 
     --muted: #0f172a;           /* slate-900 */
     --muted-fg: #e2e8f0;        /* slate-200 */
+
+    --danger: #ef4444;          /* red-500 */
+    --danger-fg: #f8fafc;       /* slate-50 */
 
     --border: #475569;          /* slate-600 */
     --outline: #60a5fa;         /* blue-400 */
@@ -457,6 +463,36 @@ article > * + *,
 
 hr {
   color: var(--muted-fg);
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.space-x-2 > * + * {
+  margin-left: .5rem;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+.space-y-2 > * + * {
+  margin-top: .5rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {

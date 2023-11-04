@@ -15,15 +15,11 @@
       main > * + section {
         margin-top: 2rem;
       }
-      .space-x-2 > * + * {
-        margin-left: 0.5rem;
-      }
-      section > * + *,
-      .space-y-2 > * + * {
+      section > * + * {
         margin-top: 0.5rem;
       }
       hr {
-        margin: 1rem 0;
+        margin: 2rem 0;
       }
     </style>
   </head>
@@ -265,6 +261,65 @@
             </p>
           </div>
         </div>
+        <hr />
+        <div class="space-y-2">
+          <h3>Utility classes</h3>
+          <p>These are some utility classes that I always find myself using
+          in my projects, so I'm including them here. These should help lessen
+          the amount of CSS you need to write for layouts.</p>
+          <div class="card">
+            <h4><code>.danger</code></h4>
+            <p>This class applies the <code>--danger</code> variable as the color
+            of the element. Useful for error messages.</p>
+            <p>Example:</p>
+            <p class="danger">Oh no! An unexpected error occured!</p>
+          </div>
+          <div class="card">
+            <h4><code>.space-x-2, space-x-4</code></h4>
+            <p>This is the tailwind class for adding even horizontal margins between elements in a block container.</p>
+            <p>Example:</p>
+            <div>
+              <p style="margin-bottom: .25rem"><code>.space-x-2</code></p>
+              <div class="space-x-2">
+                <button>Button 1</button>
+                <button>Button 2</button>
+              </div>
+            </div>
+            <div>
+              <p style="margin-bottom: .25rem"><code>.space-x-4</code></p>
+              <div class="space-x-4">
+                <button>Button 1</button>
+                <button>Button 2</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h4><code>.space-y-2, space-y-4</code></h4>
+            <p>This is the tailwind class for adding even vertical margins between elements in a block container.</p>
+            <p>Example:</p>
+            <div class="flex" style="align-items: start">
+            <div style="flex: 1">
+              <p style="margin-bottom: .25rem"><code>.space-x-2</code></p>
+              <div class="space-y-2">
+                <button style="display: block">Button 1</button>
+                <button style="display: block">Button 2</button>
+              </div>
+            </div>
+            <div style="flex: 1">
+              <p style="margin-bottom: .25rem"><code>.space-x-4</code></p>
+              <div class="space-y-4">
+                <button style="display: block">Button 1</button>
+                <button style="display: block">Button 2</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <h4><code>.flex, .flex-col</code></h4>
+            <p><code>.flex</code> applies the styles <code>display: flex</code>, <code>align-items: center</code>, and <code>gap: .5rem</code> to the element. <code>.flex-col</code> applies the style <code>flex-direction: column</code> to the element.</p>
+            <p>In my experience, these classes are enough for basic layouts.</p>
+          </div>
+        </div>
       </section>
       <section>
         <h2>Customization</h2>
@@ -313,6 +368,11 @@
           <h3>Background and text color for inputs and their placeholder</h3>
           <pre><code>--muted: #f8fafc;           /* slate-50 */
 --muted-fg: #334155;        /* slate-700 */</code></pre>
+        </div>
+        <div class="space-y-2">
+          <h3>Background and text color for danger/destructive elements</h3>
+          <pre><code>--danger: #dc2626;          /* red-600 */
+--danger-fg: #fff;          /* white */</code></pre>
         </div>
         <div class="space-y-2">
           <h3>Border and outline color</h3>
