@@ -456,8 +456,8 @@ article,
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-article > * + *,
-.card > * + * {
+article:not(.flex) > * + *,
+.card:not(.flex) > * + * {
   margin-top: 0.5rem;
 }
 
