@@ -15,6 +15,10 @@ The simplest way to use Clam.css is to include it directly from the CDN. Just co
 ```html
 <link rel="stylesheet" href="https://unpkg.com/modern-normalize" />
 <link rel="stylesheet" href="https://unpkg.com/clam.css" />
+<!-- *optional*: include the Inter font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
 ```
 
 ### Install from NPM

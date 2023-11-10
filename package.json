@@ -1,14 +1,16 @@
 {
   "name": "clam.css",
-  "version": "1.1.1",
-  "description": "Yet another classless CSS framework",
+  "version": "1.1.2",
+  "description": "Yet another classless CSS library",
   "main": "clam.css",
+  "files": ["clam.css"],
   "author": "Ryan Martin",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rmrt1n/clam.css.git"
   },
+  "homepage": "https://ryanmartin.me/clam.css",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
