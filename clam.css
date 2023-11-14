@@ -241,6 +241,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 .btn:hover {
   background-color: var(--secondary-hover);
+  color: inherit;
 }
 
 button:focus-visible,
